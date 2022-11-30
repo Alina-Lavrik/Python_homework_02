@@ -10,11 +10,11 @@ with open('file.txt', 'r') as f:
     positions = f.read().split('\n')
 positions = list(map(int, positions))
 
-n = int(input())
+n = int(input('Введите число: '))
 list_gen = [i for i in range(-n, n+1)]
 multi = 1
 for pos in positions:
     multi *= list_gen[pos]
 print(positions)
 print(list_gen)
-print(multi)
+print(f'Произведение элементов: {multi} ')
